@@ -77,7 +77,7 @@ ide_setup(){
     echo 4. PyCharm
     echo 5. None, Exit Program
 
-    echo enter 1,2, or 3
+    echo enter 1,2,3,4, or 5
     read CHOICE 
 
     if [ "$CHOICE" == "1" ];
@@ -95,16 +95,19 @@ ide_setup(){
         echo =============================== Installing Sublime Text ===============================
         brew cask install sublime-text 
 
-    elif [ "$CHOICE" == "4"];
+    elif [ "$CHOICE" == "4" ];
     then
         echo =============================== Installing PyCharm ===============================
         brew cask install pycharm
+
+    else
+        echo =============================== EXITING ===============================
+
     fi
 
 }
 
 basic_setup
-
 ide_setup
 
 
